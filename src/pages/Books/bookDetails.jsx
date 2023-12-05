@@ -21,13 +21,12 @@ function BookDetails() {
     <div className='mt-10 container max-w-6xl mx-auto p-8 min-h-[75vh] flex justify-center items-center'>
       {book ? <div className="grid w-full grid-cols-1 items-start gap-x-6 gap-y-8 sm:grid-cols-12 lg:gap-x-8 bg-red-00 shadow-md">
             <div className="overflow-hidden rounded-lg bg-gray-100 sm:col-span-full lg:col-span-3 h-full">
-              <img  src={book.image.url} alt="Two each of gray, white, and black shirts arranged on table." className="w-full h-96" />            
+              <img  src={book.image.url} alt="Two each of gray, white, and black shirts arranged on table." className="w-full h-72 md:h-96" />            
             </div>
             <div className="sm:col-span-8 lg:col-span-9 p-4">
-              <h2 className="text-2xl font-bold text-gray-900 sm:pr-12">{book.title}</h2>
-              <section aria-labelledby="information-heading" className="mt-2">
-                <h3 id="information-heading" className="sr-only">Product information</h3>
-                <div className="text-2xl text-gray-900">
+              <h2 className="text-lg md:text-2xl font-bold text-gray-900 sm:pr-12">{book.title}</h2>
+              <section className="mt-2">
+                <div className="text-xl md:text-2xl text-gray-900">
                   {
                     book.price > 0 && <span className="text-primary text-base flex justify-between"> 
                         <span>
@@ -40,8 +39,8 @@ function BookDetails() {
                   </span>
                   }
                 </div>
-                <p className='py-2 first-letter:capitalize'>{book.discription}</p>
-                <table className="table table-zebra">
+                <p className='py-2 first-letter:capitalize text-gray-500 text-sm md:text-base'>{book.discription}</p>
+                <table className="table table-zebra text-xs md:text-sm">
                 <tbody>
                   <tr>
                     <td className='font-bold'>Author</td>
@@ -61,7 +60,7 @@ function BookDetails() {
                   </tr>
                   <tr>
                     <td className='font-bold'>Download</td>
-                    <td>{book.file.url != 'book.pdf' ? <a className='btn btn-success btn-sm' href={book.file.url}>Dwonload</a> : <span className='text-error'>Unavailable</span>}</td>
+                    <td>{book.file.url != 'book.pdf' ? <a className='btn btn-success btn-xs md:btn-sm' href={book.file.url}>Dwonload</a> : <span className='text-error'>Unavailable</span>}</td>
                   </tr>
                   </tbody>
                 </table>

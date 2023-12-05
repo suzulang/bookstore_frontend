@@ -15,7 +15,7 @@ const Book = ({book}) => {
     const {books} = useSelector(state => state.cart)
     
     return <div>
-        <div className="group relative bg-white p-2 shadow-xl ring-1 ring-gray-900/5 mx-auto w-72 md:max-w-lg border">
+        <div className="group relative bg-white p-2 shadow-xl ring-1 ring-gray-900/5 mx-auto max-w-[18rem] md:max-w-lg border">
         {book.image && <img key={book._id} className="bg-slate-400 h-64 md:h-96 w-full" src={book.image.url} />}
         <div className="px-2 pt-3">
          <div>
