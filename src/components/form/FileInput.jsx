@@ -7,7 +7,7 @@ function FileInput(props) {
       <label className="label">
         <span className="label-text">{label}</span>
       </label>
-      <input type="file" required={required} accept={accept} onChange={(e) => setFile(e.target.files[0])} className="file-input file-input-bordered" />
+      <input type="file" required={required} accept={accept} onChange={(e) => setFile(e.target.files[0])} className="file-input file-input-sm md:file-input-md file-input-bordered" />
     </div>
   )
 }

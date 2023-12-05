@@ -44,7 +44,7 @@ function EditBookModal({book}) {
   return book && (
     <Modal modal={modal} setModal={setModal} title={"Edit "+book.title} classBtn={'text-xs'} iconBtn={<i className='bi bi-pencil-square text-green-500 text-lg'></i>}>
       <Modal.Body>
-          <form onSubmit={editBook} className='container mx-auto grid grid-cols-2 gap-4'>
+          <form onSubmit={editBook} className='container mx-auto grid grid-cols-2 gap-2 md:gap-4'>
             <Input label="Title" type="text" className="col-span-2" placeholder={book.title} setData={setTitle}/>
             <Input label="Author" type="text" className="col-span-2" placeholder={book.author} setData={setAuthor}/>
             <Input label="Price" type="number" className="col-span-2 md:col-span-1" placeholder={book.price} setData={setPrice} />
@@ -58,7 +58,7 @@ function EditBookModal({book}) {
               </label>
             </div>
             <Textarea placeholder={book.discription} className="col-span-2" label="Discription" setData={setDiscription} />
-            <button type='submit' className='btn mt-4 md:col-span-2'>Save</button>
+            <button type='submit' className='btn btn-sm md:btn-md mt-4 md:col-span-2'>Save</button>
           </form>
       </Modal.Body>
   </Modal>

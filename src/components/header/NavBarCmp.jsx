@@ -74,7 +74,7 @@ function NavBarCmp() {
                         </div>
                     </div>
                 </div>
-                <Link to='/' className="btn btn-ghost normal-case text-xl">Book Store</Link>
+                <Link to='/' className="btn btn-ghost normal-case text-lg md:text-xl">Book Store</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -98,10 +98,10 @@ function NavBarCmp() {
                                 </Link>
                             </li>
                             <li>
-                                <ResetPassword profile={user} />
+                                <UpdateProfile profile={user} />
                             </li>
                             <li>
-                                <UpdateProfile profile={user} />
+                                <ResetPassword profile={user} />
                             </li>
                             <li>
                                 <DeleteModal profile={user} />

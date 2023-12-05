@@ -41,12 +41,12 @@ function UpdateProfile({profile}) {
   return profile && (
     <Modal modal={modal} setModal={setModal} title={"Edit profile"} textBtn={'Edit profile'} classBtn={'text-xs'} iconBtn={<i className='bi bi-pencil-square text-green-500 text-lg'></i>}>
       <Modal.Body>
-          <form onSubmit={editProfile} className='container mx-auto grid grid-cols-2 gap-4'>
+          <form onSubmit={editProfile} className='container mx-auto grid grid-cols-2 gap-2 md:gap-4'>
             <Input label="First name" type="text" className="col-span-2 md:col-span-1" placeholder={profile.firstName} setData={setFirstName}/>
             <Input label="Last name" type="text" className="col-span-2 md:col-span-1" placeholder={profile.lastName} setData={setLastName}/>
             <Input label="Email" type="email" className="col-span-2" placeholder={profile.email} setData={setEmail} />
             <Textarea placeholder={profile.bio} className="col-span-2" label="Bio" setData={setBio} />
-            <button type='submit' className='btn mt-4 md:col-span-2'>Save</button>
+            <button type='submit' className='btn btn-sm md:btn-md mt-4 md:col-span-2'>Save</button>
           </form>
       </Modal.Body>
   </Modal>

@@ -13,13 +13,7 @@ export function addToCart(book){
             toast.success('Successfully added!');
         }
         else {
-            let newBooks = [...getState().cart.books]
-            let newBook = {...newBooks[isBook]}
-            newBook.cartCount += 1
-            newBooks[isBook] = newBook
-            dispatch(cartActions.edit(newBooks));
-            localStorage.setItem(localStorageCartName(), JSON.stringify(getState().cart.books))
-            toast.success('Successfully added 1 count!')
+            toast.error('Book is exists in cart')
         }
     }
 }
@@ -40,7 +34,7 @@ export function editCartCount(book, count){
             newBooks[isBook] = newBook
             dispatch(cartActions.edit(newBooks));
             localStorage.setItem(localStorageCartName(), JSON.stringify(getState().cart.books))
-            toast.success('Successfully added 1 count! 11')
+            toast.success(`Total copies of this book is ${count}`)
         }
     }
 }

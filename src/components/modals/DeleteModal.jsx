@@ -38,8 +38,8 @@ function DeleteModal({book, profile}) {
           <div className="py-4">Do you sure delete your {book && 'book' || profile && 'profile'}?</div>
       </Modal.Body>
       <Modal.Footer>
-          <button onClick={()=> setModal(!modal)} className='btn mt-4 md:col-span-2 bg-blue-500 text-white'>No</button>
-          <button onClick={deleteMethod} className='btn mt-4 md:col-span-2 btn-error'>Delete</button>
+          <button onClick={()=> setModal(!modal)} className='btn btn-sm md:btn-md mt-4 md:col-span-2 bg-blue-500 text-white'>No</button>
+          <button onClick={deleteMethod} className='btn btn-sm md:btn-md mt-4 md:col-span-2 btn-error'>Delete</button>
       </Modal.Footer>
     </Modal>
   )

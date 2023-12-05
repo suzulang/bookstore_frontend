@@ -4,7 +4,8 @@ import toast from 'react-hot-toast';
 const {token} = JSON.parse(localStorage.getItem("user")) || {};
 
 const customAxios = axios.create({
-    baseURL: `https://book-store-backend-lv2v.onrender.com/api/`,
+    // baseURL: `https://book-store-backend-lv2v.onrender.com/api/`,
+    baseURL: `http://localhost:3000/api/`,
     headers: {'authorization': `Bearer ${token}`}
 });
 

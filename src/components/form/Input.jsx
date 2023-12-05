@@ -6,7 +6,7 @@ function Input({label, type, setData, placeholder, className}) {
         <label className="label">
             <span className="label-text">{label}</span>
         </label>
-        <input type={type || "text"} placeholder={placeholder || label} onChange={e => setData(e.target.value)} className="input input-bordered w-full" />
+        <input type={type || "text"} placeholder={placeholder || label} onChange={e => setData(e.target.value)} className="input input-sm md:input-md input-bordered w-full" />
     </div>
   )
 }

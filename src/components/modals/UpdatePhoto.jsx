@@ -46,9 +46,9 @@ function UpdatePhoto({book, profile}) {
   return (book || profile) && (
     <Modal modal={modal} setModal={setModal} title={book && 'Edit book' || profile && 'Edit avatar'} classBtn={'text-xs'} iconBtn={<i className={`bi ${profile && ' bi-person-bounding-box' || book && ' bi-file-earmark-image'} text-blue-400 text-2xl`}></i>}>
       <Modal.Body>
-      <form onSubmit={dataEdit} className='container mx-auto grid grid-cols-2 gap-4'>
+      <form onSubmit={dataEdit} className='container mx-auto grid grid-cols-2 gap-2 md:gap-4'>
         <FileInput label={book && 'Image book' || profile && 'Avatar ' + profile.firstName} setFile={setFile} />
-        <button type='submit' className='btn mt-4 md:col-span-2'>Save</button>
+        <button type='submit' className='btn btn-sm md:btn-md mt-4 md:col-span-2'>Save</button>
       </form>
         </Modal.Body>
     </Modal>

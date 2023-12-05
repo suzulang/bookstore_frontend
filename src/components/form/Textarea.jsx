@@ -6,7 +6,7 @@ function Textarea({label, setData, placeholder, className}) {
         <label className="label">
             <span className="label-text">{label}</span>
         </label>
-        <textarea placeholder={placeholder || label} onChange={e => setData(e.target.value)} className="textarea textarea-bordered h-24" ></textarea>
+        <textarea placeholder={placeholder || label} onChange={e => setData(e.target.value)} className="textarea text-sm md:textarea-md textarea-bordered h-24" ></textarea>
     </div>
   )
 }
