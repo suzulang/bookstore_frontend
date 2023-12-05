@@ -15,6 +15,7 @@ customAxios.interceptors.request.use(config => {
     config.timeout = 10000; // Wait for 5 seconds before timing out
     return config;
 });
+
 customAxios.interceptors.response.use(
     response => response,
     error => {
