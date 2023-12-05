@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import customAxios from '../../axios';
 import { Link, useParams } from 'react-router-dom';
+import Loading from '../../components/com-small/Loading';
 
 function BookDetails() {
   const {id} = useParams();
   const [book, setBook] = useState(null);
+  const [notBook, setNotBook] = useState(false);
 
   const discount = (price,discount)=> {
     return Math.ceil((price - (price * (discount/100)))).toFixed(2)
@@ -14,6 +16,8 @@ function BookDetails() {
     (async () => {
       await customAxios.get(`/books/${id}`).then((res) => {
         setBook(res.data.book)
+      }).catch(err => {
+        setNotBook(true)
       })
     })();
   }, [id])
@@ -67,7 +71,8 @@ function BookDetails() {
               </section>
             </div>
           </div>
-      : <h1 className='text-gray-400 font-bold text-2xl'>Not found book</h1>}
+      : !notBook && <Loading /> }
+      {notBook && <h1 className='text-gray-400 font-bold text-2xl'>Not found book</h1>}
     </div>
   )
 }
