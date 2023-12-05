@@ -32,7 +32,7 @@ function BookDetails() {
               <section className="mt-2">
                 <div className="text-xl md:text-2xl text-gray-900">
                   {
-                    book.price > 0 && <span className="text-primary text-base flex justify-between"> 
+                    book.price > 0 ? <span className="text-primary text-base flex justify-between"> 
                         <span>
                           <span className={`${book.discount ? 'line-through text-red-600 text-xs opacity-50' : ''}`}>{book.price > 0 ? "£" + book.price : "Free"}</span>
                           {book.discount > 0 && " - £" + discount(book.price, book.discount)}
@@ -41,7 +41,7 @@ function BookDetails() {
                           Discount {book.discount}%
                       </div>}
                   </span>
-                  }
+                  : <span className='text-success text-sm md:text-base'>Free</span>}
                 </div>
                 <p className='py-2 first-letter:capitalize text-gray-500 text-sm md:text-base'>{book.discription}</p>
                 <table className="table table-zebra text-xs md:text-sm">
