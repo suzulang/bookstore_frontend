@@ -27,9 +27,9 @@ const Book = ({book}) => {
               }
           </div>
           <div className="pt-2 space-x-1">
-            <span className="text-lg font-bold">£{discount(book.price, book.discount)}</span>
-            {book.discount > 0 && <span className="text-gray-500 line-through">£{book.price}</span>}
-            {book.discount > 0 && <span className="text-success float-right">%{book.discount}</span>}
+            {book.price > 0 ? <span className="text-lg font-bold">£{discount(book.price, book.discount)}</span> : <span className="text-success font-bold">Free</span>}
+            {book.discount > 0 && book.price > 0 && <span className="text-gray-500 line-through">£{book.price}</span>}
+            {book.discount > 0 && book.price > 0 && <span className="text-success float-right">%{book.discount}</span>}
           </div>
           <div className="pt-2 ">
             <BookRating rating={book.rating} review="3,482" />
