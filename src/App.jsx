@@ -10,6 +10,7 @@ import Register from "./pages/auth/register";
 import { Toaster } from "react-hot-toast";
 import Cart from "./pages/Cart";
 import NotFound from "./pages/notFound";
+import Payment from './pages/payment';
 
 
 function App() {
@@ -28,11 +29,12 @@ function App() {
             <Route path="/profile" element={<AuthGuard><Profile /></AuthGuard>}/>
             <Route path="/profile/:id" element={<AuthGuard><ProfileId /></AuthGuard>}/>
             <Route path="*" element={<NotFound />}/>
+            <Route path="/payment" element={<Payment />} />
           </Routes>
           <footer className="footer footer-center p-4 bg-base-300 text-base-content mt-10">
             <div>
               <p>Copyright © { new Date().getFullYear() } - All right reserved by 
-                <a className="text-primary font-medium mx-1" href="https://fb.com/MohamedAbdelrahmanDeveloper">Mohamed</a>
+                <a className="text-primary font-medium mx-1" href="https://www.nytdc.edu.cn/">21320316</a>
               </p>
             </div>
           </footer>

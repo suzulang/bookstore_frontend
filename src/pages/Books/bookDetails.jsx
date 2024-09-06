@@ -64,7 +64,15 @@ function BookDetails() {
                   </tr>
                   <tr>
                     <td className='font-bold'>Download</td>
-                    <td>{book.file.url != 'book.pdf' ? <a className='btn btn-success btn-xs md:btn-sm' href={book.file.url}>Dwonload</a> : <span className='text-error'>Unavailable</span>}</td>
+                    <td>
+                      {book.file.url != 'book.pdf' ? (
+                        <Link to="/payment" className='btn btn-success btn-xs md:btn-sm'>
+                          Download
+                        </Link>
+                      ) : (
+                        <span className='text-error'>Unavailable</span>
+                      )}
+                    </td>
                   </tr>
                   </tbody>
                 </table>

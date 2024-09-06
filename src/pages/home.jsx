@@ -27,11 +27,11 @@ function Home() {
         <div className='hero py-40'>
           <div className="hero-content text-center">
             <div className="max-w-2xl">
-              <h1 className="text-xl md:text-5xl font-bold">Hello <span className='capitalize'>{user ? user.firstName : "Dear!"}</span></h1>
+              <h1 className="text-xl md:text-5xl font-bold">你好 <span className='capitalize'>{user ? user.firstName : "Dear!"}</span></h1>
               <p className="py-6 md:text-lg">
-              Welcome to our website, PDF Book Store! We are delighted to serve you and meet your electronic reading needs. We hope you have an enjoyable and beneficial experience with us. Enjoy browsing through many distinguished books and downloading them with ease. Thank you for trusting us!
+              欢迎来到我们的网站，PDF图书商店！我们很高兴为您服务，满足您的电子阅读需求。我们希望您能在这里获得愉快和有益的体验。请尽情浏览众多优秀的图书，并轻松下载。感谢您的信任！
               </p>
-              {user ? <Link to="/profile"><button className='btn btn-primary btn-sm md:btn-md'>Show Profile</button></Link> : <Link to="/login"><button className='btn btn-primary'>Get Login</button></Link>}
+              {user ? <Link to="/profile"><button className='btn btn-primary btn-sm md:btn-md'>个人主页</button></Link> : <Link to="/login"><button className='btn btn-primary'>Get Login</button></Link>}
             </div>
           </div>
         </div>

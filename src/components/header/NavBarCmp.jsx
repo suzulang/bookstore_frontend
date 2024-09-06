@@ -16,16 +16,16 @@ function NavBarCmp() {
         return (
             <>
                 <li>
-                    <Link to={'/'}>Home</Link>
+                    <Link to={'/'}>主页</Link>
                 </li>
                 {
                     user ? (
                         <>
                             <li>
-                                <Link to='/profile'>Profile</Link>
+                                <Link to='/profile'>个人主页</Link>
                             </li>
                             <li>
-                                <Link to='/cart'>Cart
+                                <Link to='/cart'>购物车
                                     {totalBooksCart(books) > 0 ? <span className='badge badge-success'>{totalBooksCart(books)}</span> : ''}
                                 </Link>
                             </li>
