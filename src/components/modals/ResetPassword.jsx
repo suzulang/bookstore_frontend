@@ -31,7 +31,7 @@ function ResetPassword({profile, refs}) {
   }
 
   return profile && (
-    <Modal modal={modal} setModal={setModal} title={"Change password"} textBtn={'Change password'} classBtn={'text-xs'} iconBtn={<i className='bi bi-pencil-square text-green-500 text-lg'></i>}>
+    <Modal modal={modal} setModal={setModal} title={"Change password"} textBtn={'修改密码'} classBtn={'text-xs'} iconBtn={<i className='bi bi-pencil-square text-green-500 text-lg'></i>}>
       <Modal.Body>
         <form onSubmit={changePassword} className='container mx-auto grid grid-cols-2 gap-2 md:gap-4'>
             <Input label="password" type="password" className="col-span-2" placeholder={'password'} setData={setPassword}/>

@@ -63,14 +63,14 @@ function BookDetails() {
                     </td>
                   </tr>
                   <tr>
-                    <td className='font-bold'>Download</td>
+                    <td className='font-bold'>立即购买</td>
                     <td>
                       {book.file.url != 'book.pdf' ? (
                         <Link to="/payment" className='btn btn-success btn-xs md:btn-sm'>
-                          Download
+                          立即购买
                         </Link>
                       ) : (
-                        <span className='text-error'>Unavailable</span>
+                        <span className='text-error'>暂不可用</span>
                       )}
                     </td>
                   </tr>

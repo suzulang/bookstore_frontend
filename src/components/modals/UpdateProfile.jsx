@@ -39,7 +39,7 @@ function UpdateProfile({profile}) {
   }
 
   return profile && (
-    <Modal modal={modal} setModal={setModal} title={"Edit profile"} textBtn={'Edit profile'} classBtn={'text-xs'} iconBtn={<i className='bi bi-pencil-square text-green-500 text-lg'></i>}>
+    <Modal modal={modal} setModal={setModal} title={"Edit profile"} textBtn={'编辑个人信息'} classBtn={'text-xs'} iconBtn={<i className='bi bi-pencil-square text-green-500 text-lg'></i>}>
       <Modal.Body>
           <form onSubmit={editProfile} className='container mx-auto grid grid-cols-2 gap-2 md:gap-4'>
             <Input label="First name" type="text" className="col-span-2 md:col-span-1" placeholder={profile.firstName} setData={setFirstName}/>

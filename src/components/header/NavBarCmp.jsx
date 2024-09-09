@@ -16,16 +16,13 @@ function NavBarCmp() {
         return (
             <>
                 <li>
-                    <Link to={'/'}>主页</Link>
+                    <Link to={'/'}>书店主页</Link>
                 </li>
                 {
                     user ? (
                         <>
                             <li>
-                                <Link to='/profile'>个人主页</Link>
-                            </li>
-                            <li>
-                                <Link to='/cart'>购物车
+                                <Link to='/profile'>个人主页
                                     {totalBooksCart(books) > 0 ? <span className='badge badge-success'>{totalBooksCart(books)}</span> : ''}
                                 </Link>
                             </li>
@@ -89,14 +86,14 @@ function NavBarCmp() {
                             <UserCom />
                         </label>
                         <div className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                            <li>
-                                <Link to='/profile'>
-                                    <button className='flex space-x-2 items-center'>
-                                        <i className="bi bi-person-square text-success text-lg"></i>
-                                        <span>Profile</span>
-                                    </button>                                    
-                                </Link>
-                            </li>
+                            {user.isAdmin && (
+                                <li>
+                                    <Link to='/profile'>
+                                        <i className="bi bi-gear text-primary text-lg"></i>
+                                        <span>个人主页</span>
+                                    </Link>
+                                </li>
+                            )}
                             <li>
                                 <UpdateProfile profile={user} />
                             </li>
@@ -104,12 +101,9 @@ function NavBarCmp() {
                                 <ResetPassword profile={user} />
                             </li>
                             <li>
-                                <DeleteModal profile={user} />
-                            </li>
-                            <li>
-                                <button onClick={handelLogout} className='flex space-x-2 items-center'>
+                                <button onClick={handelLogout}>
                                     <i className="bi bi-box-arrow-in-left text-error text-lg"></i>
-                                    <span>Logout</span>
+                                    <span>登出</span>
                                 </button>                                    
                             </li>
                         </div>
