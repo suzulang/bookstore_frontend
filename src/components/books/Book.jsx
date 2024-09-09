@@ -37,8 +37,7 @@ const Book = ({book}) => {
           </div>
        </div>
        {
-        user && (user.isAdmin || (book.user._id || book.user) === user._id) && 
-          <div className="absolute top-3 right-3 px-1 flex flex-row-reverse text-2xl items-center bg-white rounded">
+user && book && (user.isAdmin || (typeof book.user === 'string' ? book.user : book.user?._id) === user._id) &&          <div className="absolute top-3 right-3 px-1 flex flex-row-reverse text-2xl items-center bg-white rounded">
             <EditBookModal  book={book} />
             <UpdatePhoto  book={book} />
             <DeleteModal book={book} />
