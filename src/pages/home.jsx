@@ -27,7 +27,7 @@ function Home() {
         <div className='hero py-40'>
           <div className="hero-content text-center">
             <div className="max-w-2xl">
-              <h1 className="text-xl md:text-5xl font-bold">你好 <span className='capitalize'>{user ? user.firstName : "Dear!"}</span></h1>
+              <h1 className="text-xl md:text-5xl font-bold">你好 <span className='capitalize'>{user ? user.firstName : "通达学生"}</span></h1>
               <p className="py-6 md:text-lg">
               欢迎来到我们的网站，PDF图书商店！我们很高兴为您服务，满足您的电子阅读需求。我们希望您能在这里获得愉快和有益的体验。请尽情浏览众多优秀的图书，并轻松下载。感谢您的信任！
               </p>

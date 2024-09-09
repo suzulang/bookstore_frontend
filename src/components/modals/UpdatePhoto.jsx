@@ -20,7 +20,6 @@ function UpdatePhoto({book, profile}) {
           toast.success('Successfully added!');
         })
       }
-      toast.success('Successfully added!');
       setModal(!modal)
     }).catch(err => {
       console.log('err', err.toast);

@@ -1,14 +1,14 @@
-# react-daisy
+# 书店前端项目
 
-Deadly simple template to start react with vite + tailwindcss + daisyUI + Heroicons!
+一个极其简单的模板，用于使用 Vite + TailwindCSS + DaisyUI + Heroicons 启动 React 项目！
 
-## installation
+## 安装
 
 ```
 npm install 
 ```
 
-## How to use
+## 使用
 ```
 cd my-new-project
 yarn

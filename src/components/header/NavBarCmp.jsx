@@ -33,7 +33,7 @@ function NavBarCmp() {
                     ): (
                         <>
                             <li>
-                                <Link to={'/login'}>Login</Link>
+                                <Link to={'/login'}>登录</Link>
                             </li>
                         </>
                     )

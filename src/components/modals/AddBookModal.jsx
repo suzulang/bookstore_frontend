@@ -26,9 +26,10 @@ function AddBookModal() {
         formData.append('pages', pages);
         formData.append('discription', discription);
         formData.append('image', image);
-
+  
         customAxios.post('/books', formData , {'Content-Type': 'multipart/form-data'}).then(res=> {
           toast.success('Successfully added!');
+          setModal(false); // 关闭模态框
         }).catch(err => {
           if (err.response.data.data) {
             toast.error(err.response.data.data)
@@ -40,7 +41,7 @@ function AddBookModal() {
             toast.error(err.message)
           }
         })
-    } 
+    }
   
   return (
     <Modal modal={modal} setModal={setModal} title={"Add Book"} textBtn={'Add Book'} classBtn={'text-xs btn btn-sm'} iconBtn={<i className='bi bi-plus-circle text-lg'></i>}>
