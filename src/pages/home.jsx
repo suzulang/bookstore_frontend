@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import customAxios from '../axios';
 import { useSelector } from 'react-redux';
 import BooksAndPagi from '../components/books/BooksAndPagi';
-
+import SearchModal from '../components/SearchModal';
+import { toast } from 'react-toastify';
 
 function Home() {
   const {user} = useSelector(state => state.auth)
@@ -20,11 +21,14 @@ function Home() {
         setPageCount(Math.ceil(res.data.pagination.count))
       }).catch(e => toast.error(e.message))
     })();
-  }, [page])
+  }, [page, user])
 
   return (
     <div className='min-h-[83vh] px-4'>
-        <div className='hero py-40'>
+      <div className="absolute top-3 right-28">
+        <SearchModal setBooks={setBooks} setPageCount={setPageCount} />
+      </div>
+      <div className='hero py-40'>
           <div className="hero-content text-center">
             <div className="max-w-2xl">
               <h1 className="text-xl md:text-5xl font-bold">你好 <span className='capitalize'>{user ? user.firstName : "通达学生"}</span></h1>

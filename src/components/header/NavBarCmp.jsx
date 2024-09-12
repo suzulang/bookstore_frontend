@@ -6,6 +6,8 @@ import ResetPassword from '../modals/ResetPassword';
 import UpdateProfile from '../modals/UpdateProfile';
 import DeleteModal from '../modals/DeleteModal';
 import { totalBooksCart } from '../../pages/Cart';
+import customAxios from '../../axios';
+import { toast } from 'react-toastify';
 
 function NavBarCmp() {
     const {user} = useSelector(state => state.auth)
@@ -16,7 +18,7 @@ function NavBarCmp() {
         return (
             <>
                 <li>
-                    <Link to={'/'}>书店主页</Link>
+                  <Link to='/'>书店主页</Link>
                 </li>
                 {
                     user ? (
@@ -54,6 +56,7 @@ function NavBarCmp() {
         dispatch(logoutUser());
         navigate('/login');
     }
+
 
   return (
     <>
